@@ -40,11 +40,9 @@ const AddContact = () => {
     if (id) {
       // Edit contact
       const success = await actions.editContact(id, contact);
-      if (success) alert("Contact updated successfully!");
     } else {
       // Add new contact
       await actions.addContact(contact);
-      alert("Contact added successfully!");
     }
     navigate("/");
   };

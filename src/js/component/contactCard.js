@@ -10,11 +10,6 @@ const ContactCard = ({ contact }) => {
 
   const handleDelete = async () => {
     const success = await actions.deleteContact(contact.id);
-    if (success) {
-      alert("Contact deleted successfully!");
-    } else {
-      alert("Failed to delete contact.");
-    }
     setShowModal(false);
   };
 
